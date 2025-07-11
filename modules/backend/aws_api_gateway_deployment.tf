@@ -1,6 +1,7 @@
 resource "aws_api_gateway_deployment" "main" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   stage_name  = "main"
+  # todo: "stage_name" is deprecated: Reason: ""Terraform
   depends_on = [
     aws_api_gateway_method.path1,
     aws_api_gateway_integration.path1,
